@@ -17,8 +17,8 @@ return new class extends Migration
             $table->enum('status', array_keys(Order::$statuses));
             $table->foreignId('user_id')
                 ->constrained()
-                ->onUpdate()
-                ->onDelete();
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->foreignId('product_id')
                 ->constrained()
                 ->onUpdate('cascade')

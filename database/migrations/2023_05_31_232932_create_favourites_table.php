@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')
                 ->constrained()
-                ->onUpdate()
-                ->onDelete();
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->foreignId('product_id')
                 ->constrained()
                 ->onUpdate('cascade')
