@@ -20,6 +20,8 @@ class Product extends Model
         'city_id',
     ];
 
+    protected $perPage = 18;
+
     public function city(): BelongsTo
     {
         return $this->belongsTo(City::class);
@@ -30,7 +32,7 @@ class Product extends Model
         return $this->hasMany(ProductImage::class);
     }
 
-    public function review(): HasMany
+    public function reviews(): HasMany
     {
         return $this->hasMany(Review::class);
     }

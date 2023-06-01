@@ -17,12 +17,12 @@ class Order extends Model
     ];
 
     public const STATUS_PENDING = 'PENDING';
-    public const STATUS_PAIN = 'PAID';
+    public const STATUS_PAID = 'PAID';
     public const STATUS_DELIVERED = 'DELIVERED';
 
     public static array $statuses = [
         self::STATUS_PENDING => 'в корзине',
-        self::STATUS_PAIN => 'оплачено',
+        self::STATUS_PAID => 'оплачено',
         self::STATUS_DELIVERED => 'доставлено',
     ];
 
