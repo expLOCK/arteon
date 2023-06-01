@@ -18,8 +18,8 @@ return new class extends Migration
             $table->smallInteger('rate');
             $table->foreignId('product_id')
                 ->constrained()
-                ->onUpdate()
-                ->onDelete();
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
